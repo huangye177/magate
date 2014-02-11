@@ -1,5 +1,4 @@
 magate
-
 ======
 
 An easy-to-use simulator for decentralized distributed scheduling in Clusters, Grids, and Cloud ecosystem
