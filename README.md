@@ -1,4 +1,6 @@
-magate - an easy-to-use simulator for decentralized distributed scheduling in Clusters, Grids, and Cloud ecosystem
+magate
+======
+An easy-to-use simulator for decentralized distributed scheduling in Clusters, Grids, and Cloud ecosystem
 ======
 Decentralized distributed scheduling environment
 Real grid workload trace archive supported
