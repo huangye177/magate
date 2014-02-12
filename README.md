@@ -16,12 +16,13 @@ Features:
 
 * Self-structured P2P overlay infrastructure simulator integrated
 
-More info: http://gridgroup.hefr.ch/smartgrid/doku.php?id=masim
+More research background info: http://gridgroup.hefr.ch/smartgrid/doku.php?id=masim
 
 ======
 Quick Start:
 
 Run with source code to check the simulation out directly (after git clone, under project root directory)
+
 ./gradlew clean build run
 
 (NOTICE: the first build takes sometime to download the input job archives; more details about Input Job Archives Download is detailed below)
