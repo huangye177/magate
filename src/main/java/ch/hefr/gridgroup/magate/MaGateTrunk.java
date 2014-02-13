@@ -13,7 +13,6 @@ import org.apache.log4j.PropertyConfigurator;
 
 import ch.hefr.gridgroup.magate.em.ssl.*;
 import ch.hefr.gridgroup.magate.env.*;
-import ch.hefr.gridgroup.magate.gui.StartGUI;
 import ch.hefr.gridgroup.magate.input.*;
 import ch.hefr.gridgroup.magate.km.MaGateMonitor;
 import ch.hefr.gridgroup.magate.model.*;

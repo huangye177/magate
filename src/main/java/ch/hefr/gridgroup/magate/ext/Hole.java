@@ -1,7 +1,6 @@
 /*
  * Hole.java
- *
- * Created on 21. èervenec 2007, 14:25
+ 
  *
  * To change this template, choose Tools | Template Manager
  * and open the template in the editor.

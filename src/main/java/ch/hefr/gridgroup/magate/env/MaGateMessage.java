@@ -94,7 +94,7 @@ public class MaGateMessage {
     
     public static final String PolicyFlexibleBF = "FlexibleBF";
     
-    /** SJF: the scheduling order depends on the jobs’ ERT, with shorter jobs being executed first */
+    /** SJF: the scheduling order depends on the job, with shorter jobs being executed first */
     public static final String PolicySJF = "SJF";  
     
     /** EDF: used only for deadline scheduling, this policy prioritizes jobs with an earlier

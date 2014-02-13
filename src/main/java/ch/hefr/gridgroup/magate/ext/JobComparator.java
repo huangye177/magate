@@ -1,8 +1,6 @@
 /*
  * JobComparator.java
  *
- * Created on 19. øíjen 2007, 10:03
- *
  * To change this template, choose Tools | Template Manager
  * and open the template in the editor.
  */

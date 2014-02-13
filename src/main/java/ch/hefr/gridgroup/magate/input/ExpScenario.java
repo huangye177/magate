@@ -21,7 +21,6 @@ import ch.hefr.gridgroup.magate.env.MaGateMessage;
 import ch.hefr.gridgroup.magate.env.MaGateParam;
 import ch.hefr.gridgroup.magate.env.MaGateProfile;
 import ch.hefr.gridgroup.magate.env.SimJobFactory;
-import ch.hefr.gridgroup.magate.gui.StartGUI;
 import ch.hefr.gridgroup.magate.model.Job;
 
 public class ExpScenario {
@@ -273,7 +272,7 @@ public class ExpScenario {
 			
 		} else if (this.gwaFlag.equals(MaGateProfile.gwaCustomizedGUI)) {
 			
-			StartGUI.launch();
+//			StartGUI.launch();
 			
 		} else if (this.gwaFlag.equals(MaGateProfile.gwaAuverGrid)) {
 			

@@ -1,8 +1,6 @@
 /*
  * LengthComparator.java
  *
- * Created on 19. øíjen 2007, 14:22
- *
  * To change this template, choose Tools | Template Manager
  * and open the template in the editor.
  */
