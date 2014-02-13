@@ -21,3 +21,7 @@ gradle-app.setting
 *.txt
 *.war
 *.ear
+
+sim_report
+sim_trace
+
