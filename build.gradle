@@ -1,20 +1,12 @@
 buildscript {
-    repositories {
-        mavenCentral()
-    }
-    
-    dependencies {
-        classpath 'eu.appsatori:gradle-fatjar-plugin:0.2-rc1'
-    }
-    
-    dependencies {
-        classpath 'de.undercouch:gradle-download-task:0.5'
-    }
+    repositories { mavenCentral() }
+
+    dependencies { classpath 'eu.appsatori:gradle-fatjar-plugin:0.2-rc1' }
+
+    dependencies { classpath 'de.undercouch:gradle-download-task:0.5' }
 }
 
-repositories {
-    mavenCentral()
-}
+repositories { mavenCentral() }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
@@ -29,73 +21,67 @@ sourceCompatibility = 1.6
 version = '2.0'
 
 fatJar {
-    manifest {
-        attributes 'Main-Class': 'ch.hefr.gridgroup.magate.MaGateTrunk'
-    }
+    manifest { attributes 'Main-Class': 'ch.hefr.gridgroup.magate.MaGateTrunk' }
 }
 
 build.doLast {
-    
+
     // download Grid5000
     def f = new File('magateinput/workloadtrace/GWA-Grid5000.db3')
-	if (!f.exists()) {
-    	download {
-        	src 'https://dl.dropboxusercontent.com/s/ebd352pj45yf8rz/GWA-Grid5000.db3?dl=1&token_hash=AAH91Hq3vYti0GUW9OaBiWjUf4mkJiTIeEyoMJqLFC91bA'
-        	dest 'magateinput/workloadtrace'
-    	}
-    	
-    	file("magateinput/workloadtrace/GWA-Grid5000.db3?dl=1&token_hash=AAH91Hq3vYti0GUW9OaBiWjUf4mkJiTIeEyoMJqLFC91bA")
-			.renameTo(file("magateinput/workloadtrace/GWA-Grid5000.db3"))
-	}
-	
-	// download AuverGrid
+    if (!f.exists()) {
+        download {
+            src 'http://dl.dropboxusercontent.com/s/ebd352pj45yf8rz/GWA-Grid5000.db3?dl=1&token_hash=AAH91Hq3vYti0GUW9OaBiWjUf4mkJiTIeEyoMJqLFC91bA'
+            dest 'magateinput/workloadtrace'
+        }
+
+        file("magateinput/workloadtrace/GWA-Grid5000.db3?dl=1&token_hash=AAH91Hq3vYti0GUW9OaBiWjUf4mkJiTIeEyoMJqLFC91bA")
+                .renameTo(file("magateinput/workloadtrace/GWA-Grid5000.db3"))
+    }
+
+    // download AuverGrid
     f = new File('magateinput/workloadtrace/GWA-AuverGrid.db3')
-	if (!f.exists()) {
-    	download {
-        	src 'https://dl.dropboxusercontent.com/s/e3oi34dvla39vs4/GWA-AuverGrid.db3?dl=1&token_hash=AAF8P0UwEDlOt4f4jmk3IBFZjtVfwaj1L4l9_jAjTvfj4A'
-        	dest 'magateinput/workloadtrace'
-    	}
-    	
-    	file("magateinput/workloadtrace/GWA-AuverGrid.db3?dl=1&token_hash=AAF8P0UwEDlOt4f4jmk3IBFZjtVfwaj1L4l9_jAjTvfj4A")
-			.renameTo(file("magateinput/workloadtrace/GWA-AuverGrid.db3"))
-	}
-	
-	// download NorduGrid
+    if (!f.exists()) {
+        download {
+            src 'http://dl.dropboxusercontent.com/s/e3oi34dvla39vs4/GWA-AuverGrid.db3?dl=1&token_hash=AAF8P0UwEDlOt4f4jmk3IBFZjtVfwaj1L4l9_jAjTvfj4A'
+            dest 'magateinput/workloadtrace'
+        }
+
+        file("magateinput/workloadtrace/GWA-AuverGrid.db3?dl=1&token_hash=AAF8P0UwEDlOt4f4jmk3IBFZjtVfwaj1L4l9_jAjTvfj4A")
+                .renameTo(file("magateinput/workloadtrace/GWA-AuverGrid.db3"))
+    }
+
+    // download NorduGrid
     f = new File('magateinput/workloadtrace/GWA-NorduGrid.db3')
-	if (!f.exists()) {
-    	download {
-        	src 'https://dl.dropboxusercontent.com/s/gy9edul4596mgmo/GWA-NorduGrid.db3?dl=1&token_hash=AAHpRmuJs6Qf_8859ts8MPwpPNFnbuXXoRaNp_OVXNJNdg'
-        	dest 'magateinput/workloadtrace'
-    	}
-    	
-    	file("magateinput/workloadtrace/GWA-NorduGrid.db3?dl=1&token_hash=AAHpRmuJs6Qf_8859ts8MPwpPNFnbuXXoRaNp_OVXNJNdg")
-			.renameTo(file("magateinput/workloadtrace/GWA-NorduGrid.db3"))
-	}
-	
-	// download SHARCNET
+    if (!f.exists()) {
+        download {
+            src 'http://dl.dropboxusercontent.com/s/gy9edul4596mgmo/GWA-NorduGrid.db3?dl=1&token_hash=AAHpRmuJs6Qf_8859ts8MPwpPNFnbuXXoRaNp_OVXNJNdg'
+            dest 'magateinput/workloadtrace'
+        }
+
+        file("magateinput/workloadtrace/GWA-NorduGrid.db3?dl=1&token_hash=AAHpRmuJs6Qf_8859ts8MPwpPNFnbuXXoRaNp_OVXNJNdg")
+                .renameTo(file("magateinput/workloadtrace/GWA-NorduGrid.db3"))
+    }
+
+    // download SHARCNET
     f = new File('magateinput/workloadtrace/GWA-SHARCNET.db3')
-	if (!f.exists()) {
-    	download {
-        	src 'https://dl.dropboxusercontent.com/s/57013qxsnlzgm52/GWA-SHARCNET.db3?dl=1&token_hash=AAErG0nJfFgwlBVB_Lk2TbO89Z2D_7TUg4_R0P3OmQgbOw'
-        	dest 'magateinput/workloadtrace'
-    	}
-    	
-    	file("magateinput/workloadtrace/GWA-SHARCNET.db3?dl=1&token_hash=AAErG0nJfFgwlBVB_Lk2TbO89Z2D_7TUg4_R0P3OmQgbOw")
-			.renameTo(file("magateinput/workloadtrace/GWA-SHARCNET.db3"))
-	}
-    
-    
+    if (!f.exists()) {
+        download {
+            src 'http://dl.dropboxusercontent.com/s/57013qxsnlzgm52/GWA-SHARCNET.db3?dl=1&token_hash=AAErG0nJfFgwlBVB_Lk2TbO89Z2D_7TUg4_R0P3OmQgbOw'
+            dest 'magateinput/workloadtrace'
+        }
+
+        file("magateinput/workloadtrace/GWA-SHARCNET.db3?dl=1&token_hash=AAErG0nJfFgwlBVB_Lk2TbO89Z2D_7TUg4_R0P3OmQgbOw")
+                .renameTo(file("magateinput/workloadtrace/GWA-SHARCNET.db3"))
+    }
+
+
 }
 
 dependencies {
 
-	compile fileTree('libs')
-    
+    compile fileTree('libs')
+
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.10'
-}
-
-
+task wrapper(type: Wrapper) { gradleVersion = '1.10' }
