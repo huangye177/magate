@@ -3,7 +3,7 @@ buildscript {
 
     dependencies { classpath 'eu.appsatori:gradle-fatjar-plugin:0.2-rc1' }
 
-    dependencies { classpath 'de.undercouch:gradle-download-task:0.5' }
+    dependencies { classpath 'de.undercouch:gradle-download-task:1.2' }
 }
 
 repositories { mavenCentral() }
@@ -12,7 +12,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 apply plugin: 'fatjar'
-apply plugin: 'download-task'
+apply plugin: 'de.undercouch.download'
 
 group='ch.hefr.gridgroup'
 mainClassName = "ch.hefr.gridgroup.magate.MaGateTrunk"
